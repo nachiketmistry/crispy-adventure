@@ -1,0 +1,41 @@
+{
+  "title": "This is dashboard 2",
+  "description": "This is description for dashboard 2",
+  "dataSources": {
+    "search1": {
+      "options": {
+        "data": {
+          "columns": [
+            ["1", "2", "3", "4", "5", "6", "7", "8"],
+            ["1", "2", "3", "4", "5", "6", "7", "8"]
+          ],
+          "fields": [{ "name": "foo" }, { "name": "bar" }]
+        },
+        "meta": {}
+      },
+      "type": "ds.test"
+    }
+  },
+  "visualizations": {
+    "table": {
+      "title": "Table 2",
+      "type": "viz.table",
+      "options": {},
+      "dataSources": { "primary": "search1" }
+    },
+    "bar": {
+      "title": "Bar Chart 2",
+      "type": "viz.bar",
+      "options": {},
+      "dataSources": { "primary": "search1" }
+    }
+  },
+  "layout": {
+    "type": "absolute",
+    "options": {},
+    "structure": [
+      { "item": "bar", "position": { "x": 0, "y": 0, "w": 1200, "h": 400 } },
+      { "item": "table", "position": { "x": 0, "y": 400, "w": 1200, "h": 400 } }
+    ]
+  }
+}
